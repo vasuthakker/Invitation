@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Invitation</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="first_title">Discover</string>
+    <string name="first_desc">The fastest way to connect with startups in a single tap</string>
+
+    <string name="second_title">Connect</string>
+    <string name="second_desc">Simply swipe to connect with a startup. Chat freely &amp; take informed decisions</string>
+
+    <string name="third_title">Invest</string>
+    <string name="third_desc">Add friends to your group and invest together, We will help you keep track of everything</string>
+
+    <string name="tab1">Connect</string>
+    <string name="tab2">Discover</string>
+    <string name="tab3">Chat</string>
+    <string name="click_continue">Click to continue</string>
+
+    <string name="map_key">AIzaSyC7QppOMm1w2jxh7JKewYLHpV7GYdmXI1o</string>
+    <string name="cancel">Cancel</string>
+    <string name="lorel_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a diam at ante bibendum condimentum sed at urna. Aliquam et orci orci. Cras sagittis libero eget erat dapibus, a scelerisque tellus malesuada. Donec justo mi, commodo non purus quis, fermentum luctus massa. Praesent ultrices quam tellus, eget accumsan tortor semper nec. Suspendisse potenti. Aliquam vitae efficitur nisl. Etiam ac auctor odio. Nunc consequat sed velit quis placerat. Nullam hendrerit, urna sed ultricies imperdiet, leo neque accumsan enim, blandit tempus erat ligula elementum nisl. Vestibulum luctus ipsum at sem pellentesque, id hendrerit sem volutpat. Suspendisse suscipit quam turpis, et gravida sem dignissim at. Praesent pulvinar commodo risus, fringilla finibus turpis egestas non.</string>
+
+
+</resources>
