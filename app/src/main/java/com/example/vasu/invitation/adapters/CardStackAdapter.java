@@ -53,7 +53,6 @@ public class CardStackAdapter extends BaseAdapter {
         ImageView imgView = (ImageView) contentView.findViewById(R.id.carditem_img);
         TextView txtView = (TextView) contentView.findViewById(R.id.carditem_txt);
 
-
         imgView.setImageResource(imgResource[position % 3]);
 
         return contentView;

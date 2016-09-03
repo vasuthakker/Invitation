@@ -2,7 +2,6 @@ package com.example.vasu.invitation.fragments;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import com.example.vasu.invitation.adapters.CardStackAdapter;
 import com.example.vasu.invitation.animation.RippleAnimation;
 import com.example.vasu.invitation.cardstatck.cardstack.CardStack;
 import com.example.vasu.invitation.cardstatck.cardstack.DefaultStackEventListener;
-import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -37,8 +35,6 @@ public class Connect extends Fragment {
     CardStackAdapter mCardAdapter;
     private Bitmap bmp;
     private ImageView img;
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener authStateListener;
 
 
     @Override
@@ -54,75 +50,8 @@ public class Connect extends Fragment {
     public void onStart() {
         super.onStart();
 
-        //img = (ImageView) getActivity().findViewById(R.id.connect_imgsample);
-
-       /* mAuth = FirebaseAuth.getInstance();
-
-        authStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    // User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                } else {
-                    // User is signed out
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
-                }
-
-            }
-        };
-
-
-        mAuth.addAuthStateListener(authStateListener);
-
-        mAuth.signInAnonymously()
-                .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "signInAnonymously:onComplete:" + task.isSuccessful());
-
-                        FirebaseStorage storage = FirebaseStorage.getInstance();
-                        StorageReference storageRef = storage.getReferenceFromUrl("gs://invitation-d9f7e.appspot.com");
-
-                        StorageReference imagesRef = storageRef.child("epmc.jpg");
-                        final long ONE_MEGABYTE = 1024 * 1024;
-                        imagesRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                            @Override
-                            public void onSuccess(byte[] bytes) {
-                                // Data for "images/island.jpg" is returns, use this as needed
-                                bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                                img.setImageBitmap(bmp);
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.e(TAG, "onFailure: ", e);
-                            }
-                        });
-
-                    }
-                });*/
-
-     /*   FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://invitation-d9f7e.appspot.com");
-
-        StorageReference imagesRef = storageRef.child("epmc.jpg");
-        final long ONE_MEGABYTE = 1024 * 1024;
-        imagesRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-            @Override
-            public void onSuccess(byte[] bytes) {
-                // Data for "images/island.jpg" is returns, use this as needed
-                bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                img.setImageBitmap(bmp);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.e(TAG, "onFailure: ", e);
-            }
-        });*/
-
+        mCardAdapter = new CardStackAdapter(getActivity().getApplicationContext());
+        callCardStack();
 
     }
 
@@ -151,23 +80,23 @@ public class Connect extends Fragment {
         cardStack.setVisibility(View.GONE);
 
         //creating adapter
-        mCardAdapter = new CardStackAdapter(getActivity().getApplicationContext());
+
     }
 
     public void doRippleBackground() {
 
 
         //start ripple background animations
-        startAnimation();
+        // startAnimation();
 
         //handler created to handle cardStack as well as timer...
-        new Handler().postDelayed(new Runnable() {
+      /*  new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 callCardStack();
             }
-        }, 2000);
+        }, 2000);*/
 
     }
 

@@ -41,7 +41,6 @@ public class SplashActivity extends AppCompatActivity {
         translate(2000, txtDate, dpToPx(getApplicationContext(), -250), false);
         translate(3000, txtDate2, dpToPx(getApplicationContext(), -150), true);
 
-
     }
 
 
