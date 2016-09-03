@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="@string/weds"/>
+        android:text="@string/weds"
+        android:textColor="@android:color/black"/>
 
 
     <com.example.vasu.invitation.views.CustomTextView
