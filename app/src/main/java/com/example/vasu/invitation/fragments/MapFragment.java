@@ -292,7 +292,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Routing
 
         googleMap.addMarker(new MarkerOptions()
                 .position(endLatlng)
-                .title("Venue: Parker Jalaram Farm"));
+                .title("Venue: "+getString(R.string.jalaram_farm)));
 
 
 
